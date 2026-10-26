@@ -40,3 +40,39 @@ team if the issue persists or the business impact increases.
 
 Do not terminate processes or restart production services
 without authorization and impact assessment.
+
+## 7. Diagnostic Commands
+
+Use only commands approved for your operating system and
+organizational environment.
+
+### Linux examples
+
+Check overall system load:
+
+    uptime
+
+Identify CPU-intensive processes:
+
+    ps -eo pid,comm,%cpu,%mem --sort=-%cpu | head
+
+Review memory usage:
+
+    free -h
+
+These commands are examples for Linux systems. Interpret
+their output in the context of the affected workload.
+
+## 8. Recovery Checklist
+
+- [ ] Confirm the suspected cause.
+- [ ] Check whether a recent deployment contributed to the issue.
+- [ ] Obtain the required authorization before remediation.
+- [ ] Apply an approved corrective action.
+- [ ] Verify that CPU utilization and application response times improve.
+- [ ] Record the resolution and relevant evidence.
+
+## 9. Post-Incident Review
+
+Document the root cause, customer impact, corrective action,
+and preventive measures after the incident is resolved.
